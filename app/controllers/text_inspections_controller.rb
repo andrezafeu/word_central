@@ -4,6 +4,7 @@ class TextInspectionsController < ApplicationController
 	end
 	def create
 		@text = params[:text_inspection][:user_text]
-		render plain: @text
+		@word_count = @text.split(" ").length
+		render plain: @word_count
 	end
 end
