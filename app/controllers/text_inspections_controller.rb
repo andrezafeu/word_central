@@ -3,6 +3,6 @@ class TextInspectionsController < ApplicationController
 		render 'new'
 	end
 	def create
-		render plain: "This route is text_inspections#create"
+		render plain: params[:text_inspection][:user_text]
 	end
 end
