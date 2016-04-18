@@ -3,6 +3,7 @@ class TextInspectionsController < ApplicationController
 		render 'new'
 	end
 	def create
-		render plain: params[:text_inspection][:user_text]
+		@text = params[:text_inspection][:user_text]
+		render plain: @text
 	end
 end
